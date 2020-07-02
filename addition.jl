@@ -8,7 +8,7 @@ end
 
 @kernel function manual_add_kernel!(a, b, c)
     i, j, k = @index(Global, NTuple)
-    @inbounds a[i, j, k] = b[i, j, k] * c[i, j, k]
+    @inbounds a[i, j, k] = b[i, j, k] + c[i, j, k]
 end
 
 function manual_add!(a, b, c)
